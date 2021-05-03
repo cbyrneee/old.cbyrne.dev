@@ -1,0 +1,82 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ * Text
+ */
+.title {
+    @apply font-semibold text-lg dark:text-white;
+}
+
+.subtitle {
+    @apply font-medium dark:text-gray-200;
+}
+
+/*
+ * Containers
+ */
+.projects-container {
+    @apply p-4 flex flex-col space-y-4 md:flex-row md:space-x-4;
+}
+
+.buttons-container {
+    @apply grid grid-flow-col auto-cols-max gap-2;
+}
+
+.tags-container {
+    @apply flex flex-row space-x-2;
+}
+
+/*
+ * Cards
+ */
+.card-container {
+    @apply flex-1 p-4 bg-gray-200 dark:bg-gray-900 rounded-md;
+    animation: fadeIn 500ms;
+}
+
+.card-footer {
+    @apply mt-5;
+}
+
+.card-title {
+    @apply font-semibold text-black dark:text-white;
+}
+
+.card-subtitle {
+    @apply text-gray-700 dark:text-gray-200;
+}
+
+/*
+ * Buttons
+ */
+.button {
+    @apply text-white bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-700 py-2 px-4 rounded;
+}
+
+/*
+ * Tags
+ */
+.tag {
+    @apply text-xs inline-flex items-center font-bold uppercase px-3 py-1 text-white dark:text-gray-200 bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-700 rounded-md;
+    cursor: default;
+}
+
+/*
+ * Animations
+ */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
