@@ -28,14 +28,14 @@
             "name": "Audition",
             "description": "A web application made with React that recommends artists on Spotify based on your music taste",
             "github": "dreamhopping/audition",
-            "url": "https://audition.now.sh",
+            "url": "https://audition.cbyrne.dev",
             "tags": ["Javascript", "Typescript", "React"]
         },
         {
             "name": "Portfolio",
             "description": "This website was made with Tailwind, React and Typescript with the project list being fetched dynamically",
             "github": "dreamhopping/dreamhopping.github.io",
-            "url": "https://dreamhopping.github.io",
+            "url": "https://cbyrne.dev",
             "tags": ["TailwindCSS", "Typescript", "React"]
         }
     ]
