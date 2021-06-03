@@ -38,7 +38,6 @@ export default function Projects() {
             {projects.map((project) => {
                 return <ProjectCard key={project.name} project={project} />;
             })}
-            <span></span>
         </div>
     );
 }

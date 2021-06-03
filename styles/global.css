@@ -70,6 +70,17 @@ body {
 }
 
 /*
+ * Links
+ */
+.selected-link {
+    @apply hover:text-gray-200 transition-colors;
+}
+
+.unselected-link {
+    @apply text-gray-400 hover:text-gray-200 transition-colors;
+}
+
+/*
  * Animations
  */
 @keyframes fadeIn {

@@ -1,27 +1,27 @@
 import Head from "next/head";
 import React from "react";
+import Downloads from "../components/Downloads";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
-import Projects from "../components/Projects";
 
-export default function Home() {
+export default function DownloadsPage() {
     return (
         <>
             <Head>
-                <title>Conor Byrne</title>
+                <title>Conor Byrne - Downloads</title>
                 <meta
                     name="description"
-                    content="Hey, I'm Conor! I'm a developer and student from Ireland."
+                    content="Get the latest downloads of my projects"
                 />
             </Head>
 
             <Header
-                title="Hey, I'm Conor 👋"
-                subtitle="I'm a developer and student from Ireland"
+                title="Downloads"
+                subtitle="Get the latest downloads of my projects"
             />
             <div className="p-4 mx-auto md:mx-0 md:p-8">
-                <h1 className="title">Projects</h1>
-                <Projects></Projects>
+                <h1 className="title">Downloads</h1>
+                <Downloads />
             </div>
         </>
     );
