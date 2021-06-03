@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>dreamhopping</title>
+                <title>Conor Byrne</title>
                 <meta
                     name="description"
                     content="Hey, I'm Conor! I'm a developer and student from Ireland."
