@@ -3,40 +3,28 @@
         {
             "name": "Injector",
             "description": "A library for Kotlin which allows you to modify classes at runtime using ASM",
-            "github": "dreamhopping/Injector",
+            "github": "cbyrneee/Injector",
             "tags": ["Kotlin", "ASM"]
         },
         {
             "name": "Kotify",
             "description": "A simplistic Spotify Web API wrapper for Kotlin with an easy to use Kotlin DSL",
-            "github": "dreamhopping/Kotify",
-            "tags": ["Kotlin", "DSL", "API Wrapper"]
-        },
-        {
-            "name": "MarkdownTS",
-            "description": "A lightweight and simple markdown parsing library for Typescript",
-            "github": "dreamhopping/MarkdownTS",
-            "tags": ["Typescript", "Markdown"]
-        },
-        {
-            "name": "Coordinate",
-            "description": "A work-in-progress minecraft mapping viewer with support for the MCP, Yarn and Mojang mapping formats",
-            "github": "dreamhopping/Coordinate",
-            "tags": ["Kotlin", "Minecraft", "IJ Plugin"]
+            "github": "cbyrneee/Kotify",
+            "tags": ["Kotlin", "API Wrapper"]
         },
         {
             "name": "Audition",
             "description": "A web application made with React that recommends artists on Spotify based on your music taste",
-            "github": "dreamhopping/audition",
+            "github": "cbyrneee/audition",
             "url": "https://audition.cbyrne.dev",
-            "tags": ["Javascript", "Typescript", "React"]
+            "tags": ["Typescript", "React"]
         },
         {
             "name": "Portfolio",
             "description": "This website was made with Tailwind, React and Typescript with the project list being fetched dynamically",
-            "github": "dreamhopping/dreamhopping.github.io",
+            "github": "cbyrneee/cbyrne.dev",
             "url": "https://cbyrne.dev",
-            "tags": ["TailwindCSS", "Typescript", "React"]
+            "tags": ["Typescript", "React"]
         }
     ]
 }
