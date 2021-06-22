@@ -15,16 +15,6 @@ export default function Navigation() {
                         Home
                     </a>
                 </Link>
-                <Link href="/">
-                    <a
-                        className={
-                            (isHome ? "unselected-link" : "selected-link") +
-                            " opacity-50"
-                        }
-                    >
-                        Downloads
-                    </a>
-                </Link>
             </div>
         </div>
     );
