@@ -1,9 +1,13 @@
 .landingContainer {
-    @apply m-6 md:m-0 flex h-screen justify-center items-center;
+    @apply m-6 md:m-0 flex flex-col h-screen justify-center items-center;
+}
+
+.projects {
+    @apply m-6 md:m-10 md:pt-10 flex h-screen;
 }
 
 .main {
-    @apply text-center;
+    @apply text-center flex-none;
 }
 
 .title {
@@ -16,4 +20,16 @@
 
 .buttonContainer {
     @apply flex pt-8 gap-4 justify-center items-center;
+}
+
+.scrollIndicator {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10vh;
+    cursor: pointer;
+}
+
+.scrollImage {
+    @apply fill-current text-gray-700 dark:text-gray-300;
 }
