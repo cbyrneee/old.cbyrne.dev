@@ -1,0 +1,15 @@
+.landingContainer {
+  @apply flex h-screen justify-center items-center;
+}
+
+.main {
+  @apply text-center;
+}
+
+.title {
+  @apply text-6xl font-semibold;
+}
+
+.subtitle {
+  @apply text-3xl pt-4 font-medium text-gray-700;
+}
