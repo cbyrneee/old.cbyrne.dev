@@ -1,19 +1,19 @@
 .landingContainer {
-  @apply m-6 md:m-0 flex h-screen justify-center items-center;
+    @apply m-6 md:m-0 flex h-screen justify-center items-center;
 }
 
 .main {
-  @apply text-center;
+    @apply text-center;
 }
 
 .title {
-  @apply text-4xl md:text-6xl font-semibold;
+    @apply text-4xl md:text-6xl font-semibold;
 }
 
 .subtitle {
-  @apply text-2xl md:text-3xl pt-2 md:pt-4 font-medium text-gray-700;
+    @apply text-2xl md:text-3xl pt-2 md:pt-4 font-medium text-gray-700;
 }
 
 .buttonContainer {
-  @apply flex pt-8 gap-4 justify-center items-center;
+    @apply flex pt-8 gap-4 justify-center items-center;
 }
