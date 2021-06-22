@@ -22,8 +22,8 @@ export default function Landing() {
         </p>
 
         <div className={styles.buttonContainer}>
-          <Button name={"GitHub"} destination={"https://github.com/cbyrneee"} />
-          <Button name={"Contact"} destination={"https://github.com/cbyrneee"} />
+          <Button name={"GitHub"} icon={["fab", "github"]} destination={"https://github.com/cbyrneee"} />
+          <Button name={"Contact"} icon={["fas", "envelope"]} destination={"mailto:hello@cbyrne.dev"} />
         </div>
       </main>
     </div>

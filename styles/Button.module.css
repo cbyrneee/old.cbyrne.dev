@@ -1,3 +1,7 @@
 .buttonContainer {
-    @apply bg-accent text-white text-center px-4 py-2 rounded-md text-xl hover:bg-accent-hover transition-colors;
+    @apply flex bg-accent text-white text-center px-4 py-2 rounded-md text-xl hover:bg-accent-hover transition-colors justify-center items-center;
+}
+
+.icon {
+    @apply w-6 h-6 mr-2;
 }
