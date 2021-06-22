@@ -18,7 +18,7 @@ export default function ProjectCard(props: Props) {
                 <h1 className="card-title">{props.project.name}</h1>
                 <h3 className="card-subtitle">{props.project.description}</h3>
             </div>
-            {(props.project.github != null || props.project.url != null) && (
+            {(props.project.github || props.project.url ) && (
                 <div className="card-footer">
                     <div className="buttons-container">
                         {props.project.github && (
