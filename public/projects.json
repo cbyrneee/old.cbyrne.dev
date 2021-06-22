@@ -13,6 +13,12 @@
             "tags": ["Kotlin", "API Wrapper"]
         },
         {
+            "name": "Astatine",
+            "description": "A fabric mod for Minecraft 1.17 which fixes common bugs in the game",
+            "github": "cbyrneee/Astatine",
+            "tags": ["Java", "Fabric Mod"]
+        },
+        {
             "name": "Audition",
             "description": "A web application made with React that recommends artists on Spotify based on your music taste",
             "github": "cbyrneee/audition",
