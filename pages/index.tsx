@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import React from 'react'
+import Button from '../components/Button'
 import styles from '../styles/Landing.module.css'
 
 export default function Landing() {
@@ -18,6 +20,11 @@ export default function Landing() {
         <p className={styles.subtitle}>
           Java, Kotlin and Web Developer
         </p>
+
+        <div className={styles.buttonContainer}>
+          <Button name={"GitHub"} destination={"https://github.com/cbyrneee"} />
+          <Button name={"Contact"} destination={"https://github.com/cbyrneee"} />
+        </div>
       </main>
     </div>
   )

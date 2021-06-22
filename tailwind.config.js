@@ -15,6 +15,10 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      accent: {
+        DEFAULT: "#FF2C55",
+        hover: "#FFA5AB"
+      }
     },
   },
   variants: {
