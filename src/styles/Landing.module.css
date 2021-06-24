@@ -31,5 +31,5 @@
 }
 
 .scrollImage {
-    @apply fill-current text-gray-700 dark:text-gray-300;
+    @apply fill-current text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-100;
 }
