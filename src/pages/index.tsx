@@ -2,6 +2,7 @@ import Head from "next/head"
 import React from "react"
 
 import MainSection from "../components/sections/MainSection"
+import ProjectsSection from "../components/sections/ProjectsSection"
 
 export default function Landing() {
     return (
@@ -16,7 +17,6 @@ export default function Landing() {
             </Head>
 
             <MainSection />
-
             <ProjectsSection />
         </>
     )
