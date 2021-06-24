@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-scroll"
 import Button from "../Button"
-import styles from "../styles/Landing.module.css"
+import styles from "../../styles/Landing.module.css"
 
 export default function MainSection() {
     return (
