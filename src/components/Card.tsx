@@ -24,6 +24,9 @@ export default class Card extends Component<CardProps> {
                 <div className={styles.headerContainer}>
                     {this.props.image && (
                         <img
+                            width="48px"
+                            height="48px"
+                            alt="Icon"
                             className={"w-12 pr-2"}
                             src={this.props.image}
                         ></img>
