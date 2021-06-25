@@ -4,7 +4,7 @@ import styles from "../styles/Button.module.css"
 interface ButtonProps {
     name: string
     destination: string
-    icon: JSX.Element
+    icon: JSX.Element | null
 }
 
 export default function Button(props: ButtonProps) {
