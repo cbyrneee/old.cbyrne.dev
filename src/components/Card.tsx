@@ -44,6 +44,7 @@ export default class Card extends Component<CardProps> {
                         <div className={styles.buttonsContainer}>
                             {this.props.links.map((link: Link) => (
                                 <Button
+                                    key={link.destination}
                                     name={link.name}
                                     destination={link.destination}
                                     icon={null}
