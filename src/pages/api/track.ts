@@ -10,20 +10,18 @@ export default async (request: VercelRequest, response: VercelResponse) => {
         const json: LastFMResponse = await lastFMResponse.json()
         const track = json.recenttracks.track?.[0]
 
-        if (!track || !track["@attr"]?.nowplaying) {
-            response.status(200).send(null)
-        } else {
+        if (track && track["@attr"]?.nowplaying) {
             const image =
                 track.image.find((it) => it.size === "large")?.["#text"] ??
                 track.image[0]["#text"]
 
-            response.status(200).send({
+            return response.status(200).send({
                 name: track.name,
                 artist: track.artist["#text"],
                 image: image,
             })
         }
-    } else {
-        response.status(400).send({ message: "Failed to get LastFM data" })
     }
+
+    return response.status(200).send(null)
 }
