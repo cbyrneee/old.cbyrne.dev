@@ -13,7 +13,6 @@ export default function Landing() {
                     name="description"
                     content="Hi, I'm Conor. I'm a Java, Kotlin and Web Developer."
                 />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <MainSection />
