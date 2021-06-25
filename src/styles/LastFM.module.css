@@ -1,0 +1,23 @@
+.track {
+    @apply text-xl font-semibold text-gray-600 dark:text-gray-200;
+}
+
+.artist {
+    @apply text-lg font-medium text-gray-700 dark:text-gray-300;
+}
+
+.nowplaying {
+    @apply uppercase text-left font-semibold text-gray-500 dark:text-gray-400;
+}
+
+.artwork {
+    @apply rounded-md w-20 h-20 mr-4;
+}
+
+.trackContainer {
+    @apply text-left flex flex-row;
+}
+
+.lastFMContainer {
+    @apply bg-gray-100 dark:bg-gray-700 p-4 rounded-xl;
+}

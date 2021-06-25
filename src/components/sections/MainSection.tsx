@@ -2,8 +2,15 @@ import React from "react"
 import { Link } from "react-scroll"
 import Button from "../Button"
 import styles from "../../styles/Landing.module.css"
+import useSWR from "swr"
+import LastFM from "../LastFM"
+import { Song } from "../../lib/Song"
 
 export default function MainSection() {
+    const { data, error } = useSWR<Song>("/api/track", {
+        refreshInterval: 15000,
+    })
+
     return (
         <div className={styles.landingContainer}>
             <main className={styles.main}>
@@ -25,6 +32,12 @@ export default function MainSection() {
                         destination={"mailto:hello@cbyrne.dev"}
                     />
                 </div>
+
+                {data && !error && (
+                    <div className={styles.lastFMInfo}>
+                        <LastFM song={data} />
+                    </div>
+                )}
             </main>
 
             <Link

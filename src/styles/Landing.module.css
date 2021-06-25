@@ -18,6 +18,10 @@
     @apply text-2xl md:text-3xl pt-2 md:pt-4 font-medium text-gray-700 dark:text-gray-300;
 }
 
+.lastFMInfo {
+    @apply pt-8;
+}
+
 .buttonContainer {
     @apply flex pt-8 gap-4 justify-center items-center;
 }
