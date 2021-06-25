@@ -10,7 +10,12 @@ export default function LastFM(props: LastFMProps) {
     return (
         <div className={styles.lastFMContainer}>
             <div className={styles.trackContainer}>
-                <img className={styles.artwork} src={props.song.image}></img>
+                <img
+                    width="80px"
+                    height="80px"
+                    className={styles.artwork}
+                    src={props.song.image}
+                ></img>
                 <div>
                     <p className={styles.nowplaying}>Now playing</p>
                     <p className={styles.track}>{props.song.name}</p>
