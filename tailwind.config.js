@@ -9,6 +9,7 @@ module.exports = {
     darkMode: "media",
     theme: {
         screens: {
+            why: "280px",
             se: "320px",
             i8: "375px",
             i8plus: "414px",
