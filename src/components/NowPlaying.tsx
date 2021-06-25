@@ -15,6 +15,7 @@ export default function NowPlaying(props: NowPlayingProps) {
                     height="80px"
                     className={styles.artwork}
                     src={props.song.image}
+                    alt="Artwork"
                 ></img>
                 <div className={styles.textContainer}>
                     <p className={styles.nowplaying}>Now playing</p>

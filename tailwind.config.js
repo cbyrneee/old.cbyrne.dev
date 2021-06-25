@@ -30,7 +30,7 @@ module.exports = {
             red: colors.rose,
             yellow: colors.amber,
             accent: {
-                DEFAULT: "#FF2C55",
+                DEFAULT: "#ff1f4a",
                 hover: "#FFA5AB",
             },
         },
