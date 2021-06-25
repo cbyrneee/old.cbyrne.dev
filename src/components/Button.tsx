@@ -9,11 +9,14 @@ interface ButtonProps {
 
 export default function Button(props: ButtonProps) {
     return (
-        <div className={styles.buttonContainer}>
+        <a
+            className={styles.buttonContainer}
+            target="_blank"
+            rel="noreferrer"
+            href={props.destination}
+        >
             {props.icon}
-            <a target="_blank" rel="noreferrer" href={props.destination}>
-                {props.name}
-            </a>
-        </div>
+            {props.name}
+        </a>
     )
 }
