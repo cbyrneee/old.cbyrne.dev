@@ -19,7 +19,7 @@ export default function NowPlaying(props: NowPlayingProps) {
                 <div>
                     <p className={styles.nowplaying}>Now playing</p>
                     <p className={styles.track}>{props.song.name}</p>
-                    <p className={styles.artist}>{props.song.artist}</p>
+                    <p className={styles.artist}>by {props.song.artist}</p>
                 </div>
             </div>
         </div>

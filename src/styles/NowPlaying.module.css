@@ -3,7 +3,7 @@
 }
 
 .artist {
-    @apply font-medium text-gray-700 dark:text-gray-300 w-36 md:w-auto whitespace-nowrap overflow-hidden overflow-ellipsis;
+    @apply font-normal text-gray-500 dark:text-gray-300 w-36 md:w-auto whitespace-nowrap overflow-hidden overflow-ellipsis;
 }
 
 .nowplaying {
