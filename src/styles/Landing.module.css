@@ -27,7 +27,7 @@
 }
 
 .scrollIndicator {
-    @apply flex justify-center absolute bottom-20 cursor-pointer;
+    @apply flex justify-center absolute bottom-10 cursor-pointer;
 }
 
 .scrollImage {
