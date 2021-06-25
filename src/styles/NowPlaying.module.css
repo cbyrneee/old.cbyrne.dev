@@ -1,13 +1,18 @@
 .track {
-    @apply text-lg md:text-xl font-semibold text-gray-600 dark:text-gray-200 w-40 md:w-auto whitespace-nowrap overflow-hidden overflow-ellipsis;
+    @apply text-lg md:text-xl font-semibold text-gray-600 dark:text-gray-200 w-auto whitespace-nowrap overflow-hidden overflow-ellipsis;
 }
 
 .artist {
-    @apply font-normal text-gray-500 dark:text-gray-300 w-40 md:w-auto whitespace-nowrap overflow-hidden overflow-ellipsis;
+    @apply font-normal text-gray-500 dark:text-gray-300 w-auto whitespace-nowrap overflow-hidden overflow-ellipsis;
 }
 
 .nowplaying {
-    @apply uppercase text-left font-semibold text-accent;
+    @apply uppercase text-left w-auto font-semibold text-accent;
+}
+
+.textContainer {
+    @apply flex-1;
+    overflow: hidden;
 }
 
 .artwork {
@@ -20,4 +25,14 @@
 
 .lastFMContainer {
     @apply bg-gray-100 dark:bg-gray-700 p-4 rounded-xl;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
 }

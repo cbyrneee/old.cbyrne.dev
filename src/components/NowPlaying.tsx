@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useLayoutEffect, useRef, useState } from "react"
 import { Song } from "../lib/Song"
 import styles from "../styles/NowPlaying.module.css"
 
@@ -16,9 +16,9 @@ export default function NowPlaying(props: NowPlayingProps) {
                     className={styles.artwork}
                     src={props.song.image}
                 ></img>
-                <div>
+                <div className={styles.textContainer}>
                     <p className={styles.nowplaying}>Now playing</p>
-                    <p className={styles.track}>{props.song.name}</p>
+                    <p className={styles.track + "      "}>{props.song.name}</p>
                     <p className={styles.artist}>by {props.song.artist}</p>
                 </div>
             </div>

@@ -15,11 +15,11 @@
 }
 
 .lastFMInfo {
-    @apply pt-8 md:w-full md:px-8;
+    @apply pt-8 w-full md:px-8;
 }
 
 .buttonContainer {
-    @apply w-full flex pt-8 px-8 gap-4 justify-center items-center;
+    @apply w-full flex pt-8 px-12 gap-4 justify-center items-center;
 }
 
 .scrollIndicator {
