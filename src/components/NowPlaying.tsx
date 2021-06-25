@@ -1,12 +1,12 @@
 import React from "react"
 import { Song } from "../lib/Song"
-import styles from "../styles/LastFM.module.css"
+import styles from "../styles/NowPlaying.module.css"
 
-interface LastFMProps {
+interface NowPlayingProps {
     song: Song
 }
 
-export default function LastFM(props: LastFMProps) {
+export default function NowPlaying(props: NowPlayingProps) {
     return (
         <div className={styles.lastFMContainer}>
             <div className={styles.trackContainer}>

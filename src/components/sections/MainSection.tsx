@@ -4,7 +4,7 @@ import Button from "../Button"
 import styles from "../../styles/Landing.module.css"
 import buttonStyles from "../../styles/Button.module.css"
 import useSWR from "swr"
-import LastFM from "../LastFM"
+import NowPlaying from "../NowPlaying"
 import { Song } from "../../lib/Song"
 import { MailIcon, CodeIcon } from "@heroicons/react/solid"
 
@@ -37,7 +37,7 @@ export default function MainSection() {
 
                 {data && !error && (
                     <div className={styles.lastFMInfo}>
-                        <LastFM song={data} />
+                        <NowPlaying song={data} />
                     </div>
                 )}
             </main>
