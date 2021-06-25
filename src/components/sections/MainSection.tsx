@@ -2,9 +2,11 @@ import React from "react"
 import { Link } from "react-scroll"
 import Button from "../Button"
 import styles from "../../styles/Landing.module.css"
+import buttonStyles from "../../styles/Button.module.css"
 import useSWR from "swr"
 import LastFM from "../LastFM"
 import { Song } from "../../lib/Song"
+import { MailIcon, CodeIcon } from "@heroicons/react/solid"
 
 export default function MainSection() {
     const { data, error } = useSWR<Song>("/api/track", {
@@ -23,12 +25,12 @@ export default function MainSection() {
                 <div className={styles.buttonContainer}>
                     <Button
                         name={"GitHub"}
-                        icon={["fab", "github"]}
+                        icon={<CodeIcon className={buttonStyles.icon} />}
                         destination={"https://github.com/cbyrneee"}
                     />
                     <Button
                         name={"Contact"}
-                        icon={["fas", "envelope"]}
+                        icon={<MailIcon className={buttonStyles.icon} />}
                         destination={"mailto:hello@cbyrne.dev"}
                     />
                 </div>
