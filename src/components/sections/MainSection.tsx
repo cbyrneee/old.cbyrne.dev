@@ -22,24 +22,26 @@ export default function MainSection() {
                     Java, Kotlin and Web Developer
                 </p>
 
-                <div className={styles.buttonContainer}>
-                    <Button
-                        name={"GitHub"}
-                        icon={<CodeIcon className={buttonStyles.icon} />}
-                        destination={"https://github.com/cbyrneee"}
-                    />
-                    <Button
-                        name={"Contact"}
-                        icon={<MailIcon className={buttonStyles.icon} />}
-                        destination={"mailto:hello@cbyrne.dev"}
-                    />
-                </div>
-
-                {data && !error && (
-                    <div className={styles.lastFMInfo}>
-                        <NowPlaying song={data} />
+                <div className={styles.controls}>
+                    <div className={styles.buttonContainer}>
+                        <Button
+                            name={"GitHub"}
+                            icon={<CodeIcon className={buttonStyles.icon} />}
+                            destination={"https://github.com/cbyrneee"}
+                        />
+                        <Button
+                            name={"Contact"}
+                            icon={<MailIcon className={buttonStyles.icon} />}
+                            destination={"mailto:hello@cbyrne.dev"}
+                        />
                     </div>
-                )}
+
+                    {data && !error && (
+                        <div className={styles.lastFMInfo}>
+                            <NowPlaying song={data} />
+                        </div>
+                    )}
+                </div>
             </main>
 
             <Link
