@@ -13,7 +13,7 @@ export default function Button(props: ButtonProps) {
     return (
         <div className={styles.buttonContainer}>
             <FontAwesomeIcon className={styles.icon} icon={props.icon} />
-            <a target="_blank" href={props.destination}>
+            <a target="_blank" rel="noreferrer" href={props.destination}>
                 {props.name}
             </a>
         </div>
