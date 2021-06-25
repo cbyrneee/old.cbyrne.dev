@@ -2,12 +2,8 @@
     @apply m-6 md:m-0 flex flex-col h-screen justify-center items-center;
 }
 
-.projects {
-    @apply m-6 md:m-10 md:pt-10 flex h-screen;
-}
-
 .main {
-    @apply text-center flex-none;
+    @apply text-center w-4/12 flex flex-col justify-center items-center;
 }
 
 .title {
@@ -19,11 +15,11 @@
 }
 
 .lastFMInfo {
-    @apply pt-8;
+    @apply pt-8 w-full px-8;
 }
 
 .buttonContainer {
-    @apply flex pt-8 gap-4 justify-center items-center;
+    @apply w-full flex pt-8 px-8 gap-4 justify-center items-center;
 }
 
 .scrollIndicator {

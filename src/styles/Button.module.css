@@ -1,5 +1,5 @@
 .buttonContainer {
-    @apply flex bg-accent text-white text-center px-4 py-2 rounded-md text-xl hover:bg-accent-hover transition-colors justify-center items-center cursor-pointer;
+    @apply flex flex-1 bg-accent text-white text-center px-4 py-2 rounded-md text-xl hover:bg-accent-hover transition-colors justify-center items-center cursor-pointer;
 }
 
 .icon {
