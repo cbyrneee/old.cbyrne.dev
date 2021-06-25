@@ -8,6 +8,16 @@ module.exports = {
     ],
     darkMode: "media",
     theme: {
+        screens: {
+            se: "320px",
+            i8: "375px",
+            i8plus: "414px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+        },
         colors: {
             transparent: "transparent",
             current: "currentColor",
