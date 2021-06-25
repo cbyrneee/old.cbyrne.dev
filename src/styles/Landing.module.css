@@ -3,7 +3,7 @@
 }
 
 .main {
-    @apply text-center w-4/12 flex flex-col justify-center items-center;
+    @apply text-center w-full md:w-4/12 flex flex-col justify-center items-center;
 }
 
 .title {
@@ -15,7 +15,7 @@
 }
 
 .lastFMInfo {
-    @apply pt-8 w-full px-8;
+    @apply pt-8 md:w-full md:px-8;
 }
 
 .buttonContainer {
