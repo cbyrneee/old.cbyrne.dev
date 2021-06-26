@@ -1,10 +1,15 @@
 import styles from "../styles/Card.module.css"
 import React, { Component } from "react"
-import Button from "./Button"
 
 interface Link {
     name: string
     destination: string
+}
+
+interface CardButtonProps {
+    name: string
+    destination: string
+    className: string
 }
 
 interface CardProps {
@@ -13,6 +18,19 @@ interface CardProps {
     content: string
     image: string | null
     links: Link[]
+}
+
+function CardButton(props: CardButtonProps) {
+    return (
+        <a
+            className={props.className}
+            target="_blank"
+            rel="noreferrer"
+            href={props.destination}
+        >
+            {props.name}
+        </a>
+    )
 }
 
 export default class Card extends Component<CardProps> {
@@ -27,27 +45,26 @@ export default class Card extends Component<CardProps> {
                             width="48px"
                             height="48px"
                             alt="Icon"
-                            className={"w-12 pr-2"}
+                            className={"w-12 mr-2"}
                             src={this.props.image}
                         ></img>
                     )}
                     <div>
                         <h3 className={styles.title}>{this.props.title}</h3>
+                        <p className={styles.subtitle}>{this.props.subtitle}</p>
                     </div>
                 </div>
-
-                <p className={styles.subtitle}>{this.props.subtitle}</p>
 
                 <div className={styles.contentContainer}>
                     <p className={styles.content}>{this.props.content}</p>
                     {this.props.links.length > 0 && (
                         <div className={styles.buttonsContainer}>
                             {this.props.links.map((link: Link) => (
-                                <Button
+                                <CardButton
+                                    className={styles.cardButton}
                                     key={link.destination}
                                     name={link.name}
                                     destination={link.destination}
-                                    icon={null}
                                 />
                             ))}
                         </div>

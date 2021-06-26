@@ -11,7 +11,7 @@
 }
 
 .headerContainer {
-    @apply flex flex-row items-center pb-2;
+    @apply flex flex-row items-center;
 }
 
 .contentContainer {
@@ -24,4 +24,8 @@
 
 .content {
     @apply font-normal text-gray-600 dark:text-gray-300;
+}
+
+.cardButton {
+    @apply flex flex-none bg-accent text-white text-center px-4 py-2 rounded-md text-base md:text-lg hover:bg-accent-hover transition-colors justify-center items-center cursor-pointer;
 }
