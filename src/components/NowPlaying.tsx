@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react"
+import React from "react"
 import { Song } from "../lib/Song"
 import styles from "../styles/NowPlaying.module.css"
 
