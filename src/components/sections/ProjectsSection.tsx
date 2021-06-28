@@ -40,6 +40,7 @@ export default function ProjectsSection() {
 
                                 return (
                                     <Card
+                                        key={project.id}
                                         title={project.name}
                                         subtitle={project.subtitle}
                                         content={project.description}
