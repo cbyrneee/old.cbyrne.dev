@@ -3,7 +3,7 @@ import { VercelRequest, VercelResponse } from "@vercel/node"
 
 export default async (request: VercelRequest, response: VercelResponse) => {
     const lastFMResponse = await fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${process.env.LAST_FM_USER}&api_key=${process.env.LAST_FM_KEY}&format=json`
+        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${process.env.LAST_FM_USER}&api_key=${process.env.LAST_FM_KEY}&format=json`
     )
 
     if (lastFMResponse.ok) {
