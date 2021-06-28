@@ -11,7 +11,6 @@ interface ProjectsSectionProps {
 export default function ProjectsSection(props: ProjectsSectionProps) {
     const { data, error } = useSWR<Project[]>("/api/projects", {
         initialData: props.projects,
-        refreshInterval: 300000,
     })
 
     return (
