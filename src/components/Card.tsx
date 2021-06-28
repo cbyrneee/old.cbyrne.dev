@@ -1,7 +1,7 @@
 import styles from "../styles/Card.module.css"
 import React, { Component } from "react"
 
-interface Link {
+export interface Link {
     name: string
     destination: string
 }
@@ -45,7 +45,7 @@ export default class Card extends Component<CardProps> {
                             width="48px"
                             height="48px"
                             alt="Icon"
-                            className={"w-12 mr-2"}
+                            className={"w-12 mr-2 rounded-xl"}
                             src={this.props.image}
                         ></img>
                     )}
