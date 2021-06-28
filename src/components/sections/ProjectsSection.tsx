@@ -4,8 +4,15 @@ import { Project } from "../../lib/Project"
 import styles from "../../styles/Projects.module.css"
 import Card, { Link } from "../Card"
 
-export default function ProjectsSection() {
-    const { data, error } = useSWR<Project[]>("/api/projects")
+interface ProjectsSectionProps {
+    projects: Project[]
+}
+
+export default function ProjectsSection(props: ProjectsSectionProps) {
+    const { data, error } = useSWR<Project[]>("/api/projects", {
+        initialData: props.projects,
+        refreshInterval: 300000,
+    })
 
     return (
         <div id={"projects"} className={styles.projectsContainer}>
@@ -14,47 +21,43 @@ export default function ProjectsSection() {
                 <p className={styles.subtitle}>
                     A collection of my various projects that I have made
                 </p>
-                {error ? (
-                    <p className={styles.errorMessage}>
-                        Failed to load projects!
-                    </p>
-                ) : data ? (
-                    data && (
-                        <div className={styles.cards}>
-                            {data.map((project) => {
-                                const links: Link[] = []
+                {data ? (
+                    <div className={styles.cards}>
+                        {data.map((project) => {
+                            const links: Link[] = []
 
-                                if (project.github) {
-                                    links.push({
-                                        name: "GitHub",
-                                        destination: project.github,
-                                    })
-                                }
+                            if (project.github) {
+                                links.push({
+                                    name: "GitHub",
+                                    destination: project.github,
+                                })
+                            }
 
-                                if (project.website) {
-                                    links.push({
-                                        name: "Website",
-                                        destination: project.website,
-                                    })
-                                }
+                            if (project.website) {
+                                links.push({
+                                    name: "Website",
+                                    destination: project.website,
+                                })
+                            }
 
-                                return (
-                                    <Card
-                                        key={project.id}
-                                        title={project.name}
-                                        subtitle={project.subtitle}
-                                        content={project.description}
-                                        image={
-                                            project.icon
-                                                ? `/api/image/${project.icon.hash}`
-                                                : null
-                                        }
-                                        links={links}
-                                    />
-                                )
-                            })}
-                        </div>
-                    )
+                            return (
+                                <Card
+                                    key={project.id}
+                                    title={project.name}
+                                    subtitle={project.subtitle}
+                                    content={project.description}
+                                    image={
+                                        project.icon
+                                            ? `/api/image/${project.icon.hash}`
+                                            : null
+                                    }
+                                    links={links}
+                                />
+                            )
+                        })}
+                    </div>
+                ) : error ? (
+                    <p className={styles.infoMessage}>Error!</p>
                 ) : (
                     <p className={styles.infoMessage}>Loading...</p>
                 )}
