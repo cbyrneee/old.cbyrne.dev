@@ -27,21 +27,21 @@ export default function Landing(props: LandingProps) {
     )
 }
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-    const res = await fetch(`${process.env.STRAPI_URL}/projects`)
-    const data = await res.json()
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//     const res = await fetch(`${process.env.STRAPI_URL}/projects`)
+//     const data = await res.json()
 
-    if (!res.ok || !data) {
-        return {
-            notFound: true,
-        }
-    }
+//     if (!res.ok || !data) {
+//         return {
+//             notFound: true,
+//         }
+//     }
 
-    return {
-        props: { data },
-        revalidate: 300,
-    }
-}
+//     return {
+//         props: { data },
+//         revalidate: 300,
+//     }
+// }
 
 /**
  *    <footer className={styles.footer}>
