@@ -1,12 +1,13 @@
 import React from "react"
-import { Link } from "react-scroll"
 import Button from "../Button"
 import styles from "../../styles/Landing.module.css"
 import buttonStyles from "../../styles/Button.module.css"
 import useSWR from "swr"
 import NowPlaying from "../NowPlaying"
+
+import { Link } from "react-scroll"
 import { Song } from "../../lib/Song"
-import { MailIcon, CodeIcon } from "@heroicons/react/solid"
+import { CodeIcon, ChatIcon } from "@heroicons/react/solid"
 
 export default function MainSection() {
     const { data, error } = useSWR<Song>("/api/track", {
@@ -31,8 +32,8 @@ export default function MainSection() {
                         />
                         <Button
                             name={"Contact"}
-                            icon={<MailIcon className={buttonStyles.icon} />}
-                            destination={"mailto:hello@cbyrne.dev"}
+                            icon={<ChatIcon className={buttonStyles.icon} />}
+                            destination={"https://twitter.com/cbyrneee"}
                         />
                     </div>
 
