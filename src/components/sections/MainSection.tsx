@@ -52,7 +52,9 @@ export default function MainSection() {
                 smooth={true}
                 duration={1000}
             >
-                <svg
+                <div className="flex flex-col text-center items-center">
+                    <p className="pb-6 dark:text-gray-200 opacity-0 lg:opacity-100">Scroll to <strong>Projects</strong></p>
+                    <svg
                     className={styles.scrollImage}
                     width="30"
                     height="19"
@@ -62,6 +64,7 @@ export default function MainSection() {
                 >
                     <path d="M26.475 0.474976L15 11.925L3.525 0.474976L0 3.99997L15 19L30 3.99997L26.475 0.474976Z" />
                 </svg>
+                </div>
             </Link>
         </div>
     )
