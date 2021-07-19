@@ -22,38 +22,42 @@ export default function ProjectsSection(props: ProjectsSectionProps) {
                 </p>
                 {data ? (
                     <div className={styles.cards}>
-                        {data.map((project) => {
-                            const links: Link[] = []
+                        {data
+                            .sort((a, b) => {
+                                return a.icon && !b.icon ? -1 : 1
+                            })
+                            .map((project) => {
+                                const links: Link[] = []
 
-                            if (project.github) {
-                                links.push({
-                                    name: "GitHub",
-                                    destination: project.github,
-                                })
-                            }
+                                if (project.github) {
+                                    links.push({
+                                        name: "GitHub",
+                                        destination: project.github,
+                                    })
+                                }
 
-                            if (project.website) {
-                                links.push({
-                                    name: "Website",
-                                    destination: project.website,
-                                })
-                            }
+                                if (project.website) {
+                                    links.push({
+                                        name: "Website",
+                                        destination: project.website,
+                                    })
+                                }
 
-                            return (
-                                <Card
-                                    key={project.id}
-                                    title={project.name}
-                                    subtitle={project.subtitle}
-                                    content={project.description}
-                                    image={
-                                        project.icon
-                                            ? `/api/image/${project.icon.hash}`
-                                            : null
-                                    }
-                                    links={links}
-                                />
-                            )
-                        })}
+                                return (
+                                    <Card
+                                        key={project.id}
+                                        title={project.name}
+                                        subtitle={project.subtitle}
+                                        content={project.description}
+                                        image={
+                                            project.icon
+                                                ? `/api/image/${project.icon.hash}`
+                                                : null
+                                        }
+                                        links={links}
+                                    />
+                                )
+                            })}
                     </div>
                 ) : error ? (
                     <p className={styles.infoMessage}>Error!</p>
