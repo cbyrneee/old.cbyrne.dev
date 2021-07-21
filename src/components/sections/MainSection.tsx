@@ -33,7 +33,7 @@ export default function MainSection() {
                         <Button
                             name={"Contact"}
                             icon={<ChatIcon className={buttonStyles.icon} />}
-                            destination={"https://twitter.com/cbyrneee"}
+                            destination={"https://twitter.com/cbyrnedev"}
                         />
                     </div>
 
