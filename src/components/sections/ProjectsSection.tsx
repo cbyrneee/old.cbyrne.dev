@@ -9,8 +9,9 @@ interface ProjectsSectionProps {
 }
 
 export default function ProjectsSection(props: ProjectsSectionProps) {
+    const isFirefox = global.window ? (window.navigator.userAgent).includes("Firefox") : false
     const { data, error } = useSWR<Project[]>("/api/projects", {
-        initialData: props.projects,
+        initialData: isFirefox ? undefined : props.projects,
     })
 
     return (
