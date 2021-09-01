@@ -9,7 +9,9 @@ interface ProjectsSectionProps {
 }
 
 export default function ProjectsSection(props: ProjectsSectionProps) {
-    const isFirefox = global.window ? (window.navigator.userAgent).includes("Firefox") : false
+    const isFirefox = global.window
+        ? window.navigator.userAgent.includes("Firefox")
+        : false
     const { data, error } = useSWR<Project[]>("/api/projects", {
         initialData: isFirefox ? undefined : props.projects,
     })
@@ -25,7 +27,10 @@ export default function ProjectsSection(props: ProjectsSectionProps) {
                     <div className={styles.cards}>
                         {data
                             .sort((a, b) => {
-                                return a.icon && !b.icon ? -1 : 1
+                                return a.name.toLowerCase() >
+                                    b.name.toLowerCase()
+                                    ? 1
+                                    : -1
                             })
                             .map((project) => {
                                 const links: Link[] = []
