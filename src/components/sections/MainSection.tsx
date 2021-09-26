@@ -7,7 +7,7 @@ import NowPlaying from "../NowPlaying"
 
 import { Link } from "react-scroll"
 import { Song } from "../../lib/Song"
-import { CodeIcon, ChatIcon } from "@heroicons/react/solid"
+import { CodeIcon, MailIcon } from "@heroicons/react/solid"
 
 export default function MainSection() {
     const { data, error } = useSWR<Song>("/api/track", {
@@ -32,8 +32,8 @@ export default function MainSection() {
                         />
                         <Button
                             name={"Contact"}
-                            icon={<ChatIcon className={buttonStyles.icon} />}
-                            destination={"https://twitter.com/cbyrnedev"}
+                            icon={<MailIcon className={buttonStyles.icon} />}
+                            destination={"mailto:hello@cbyrne.dev"}
                         />
                     </div>
 
