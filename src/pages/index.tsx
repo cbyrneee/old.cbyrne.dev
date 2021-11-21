@@ -23,7 +23,7 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                 <title>Conor Byrne</title>
             </Head>
             <div className={"md:h-screen h-full bg-background"}>
-                <div className={"container p-4 md:pt-20 md:p-0 md:mx-auto"}>
+                <div className={"container p-4 md:py-8 md:p-0 md:mx-auto"}>
                     <WindowGroup>
                         <WindowRow>
                             <AboutMeWindow/>
