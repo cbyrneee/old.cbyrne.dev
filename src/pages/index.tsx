@@ -16,7 +16,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
     return (
-        <div className={"h-screen bg-background"}>
+        <div className={"md:h-screen h-full bg-background"}>
             <div className={"container p-4 md:pt-20 md:p-0 md:mx-auto"}>
                 <WindowGroup>
                     <WindowRow>

@@ -32,7 +32,7 @@ function NowPlayingWindow(props: NowPlayingWindowProps) {
                     </div>
 
                     <div className={"w-3/4 md:w-5/6 mr-5"}>
-                        <h1 className={"text-2xl font-bold text-black mt-2 md:mt-3 line-clamp-1"}>{data.name}</h1>
+                        <h1 className={"text-2xl font-bold text-black md:mt-3 line-clamp-1"}>{data.name}</h1>
                         <h2 className={"text-2xl font-medium text-black/75 line-clamp-1"}>{data.artist}</h2>
                     </div>
                 </div>
