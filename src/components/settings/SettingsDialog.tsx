@@ -1,8 +1,9 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment} from 'react';
 import {Dialog, Switch, Transition} from '@headlessui/react'
 import Window from "../window/Window";
 import Title from "../typography/Title";
 import Body from '../typography/Body';
+import useDarkMode from "../../lib/hooks/useDarkMode";
 
 interface SettingsDialogProps {
     isOpen: boolean;
@@ -10,7 +11,7 @@ interface SettingsDialogProps {
 }
 
 export default function SettingsDialog({isOpen, setOpen}: SettingsDialogProps) {
-    const [darkModeEnabled, setDarkModeEnabled] = useState(false);
+    const [_, override, setOverride] = useDarkMode()
 
     function close() {
         setOpen(false);
@@ -38,21 +39,20 @@ export default function SettingsDialog({isOpen, setOpen}: SettingsDialogProps) {
                         onClose={close}
                         onlyClose
                     >
-                        <Title muted={false}>Settings</Title>
-                        <Title>A very fancy settings menu!</Title>
+                        <Title muted={false} bottomPadding={false}>Settings</Title>
 
                         <div className={"flex pt-8 gap-3"}>
-                            <Body>Use Dark Mode</Body>
+                            <Body>Force Dark Mode</Body>
 
                             <Switch
-                                checked={darkModeEnabled}
-                                onChange={setDarkModeEnabled}
+                                checked={override}
+                                onChange={setOverride}
                                 className={`${
-                                    darkModeEnabled ? 'bg-accent' : 'bg-gray-300'
+                                    override ? 'bg-accent' : 'bg-gray-400'
                                 } relative inline-flex items-center h-8 rounded-full w-16 transition-all`}
                             >
                             <span
-                                className={`${darkModeEnabled ? 'translate-x-10' : 'translate-x-2'} inline-block w-4 h-4 transform transition-all bg-white rounded-full`}
+                                className={`${override ? 'translate-x-10' : 'translate-x-2'} inline-block w-4 h-4 transform transition-all bg-white rounded-full`}
                             />
                             </Switch>
                         </div>

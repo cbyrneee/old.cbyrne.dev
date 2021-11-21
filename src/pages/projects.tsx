@@ -6,15 +6,18 @@ import Head from "next/head";
 import Dock from "../components/dock/Dock";
 import WindowGroup from "../components/window/WindowGroup";
 import ProjectWindow from "../components/window/impl/projects/ProjectWindow";
+import useDarkMode from "../lib/hooks/useDarkMode";
 
 const Projects: NextPage = () => {
+    const [] = useDarkMode();
+
     return <>
         <Head>
             <title>Conor Byrne - Projects</title>
         </Head>
 
         <div
-            className={"flex flex-col items-center content-center justify-between h-full md:h-screen bg-background"}
+            className={"flex items-center content-center justify-between min-h-screen bg-background dark:bg-background-dark flex-col-reverse xl:flex-col"}
         >
             <WindowGroup>
                 <ProjectWindow

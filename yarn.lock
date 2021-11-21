@@ -3712,6 +3712,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-local-storage@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/use-local-storage/-/use-local-storage-2.2.5.tgz#58513ab8fca52efba648e824be8d1cbf89496bed"
+  integrity sha512-KY+9wkIFHnLpBcRrIcXAhjgcjaJtWF8YGJhlZrLXaAxICXiKamtYVzHMVOj+d0Ph3yUusbYh9AmMq+BSzCfegA==
+
 use-subscription@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"
