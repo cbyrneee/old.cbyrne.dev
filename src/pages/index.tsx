@@ -11,15 +11,12 @@ import LinksWindow from "../components/window/impl/home/LinksWindow";
 import ExperienceWindow from "../components/window/impl/home/ExperienceWindow";
 import Head from "next/head";
 import Dock from "../components/dock/Dock";
-import useDarkMode from "../lib/hooks/useDarkMode";
 
 interface HomeProps {
     nowPlayingCache: TrackData | undefined
 }
 
 const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
-    const [] = useDarkMode();
-
     return (
         <div>
             <Head>

@@ -15,15 +15,15 @@ export default function Dock() {
             <SettingsDialog isOpen={isShowingSettings} setOpen={setShowingSettings}/>
 
             <Window removeDecoration>
-                <div className={"flex gap-4 flex-row justify-between"}>
-                    <div className={"flex gap-4 flex-row justify-between"}>
+                <div className={"grid grid-cols-2 gap-4 place-content-center sm:place-content-start"}>
+                    <div className={"flex flex-row gap-4 place-self-start"}>
                         <LinkButton
                             href={"/"}
                             inactive={router.asPath != "/"}
                             dontOpenNewTab
                         >
-                            <div className={"flex gap-3 text-2xl"}>
-                                <HomeIcon className={"w-7"}/>
+                            <div className={"grid grid-flow-col gap-3 items-center text-2xl"}>
+                                <HomeIcon className={"w-6"}/>
                                 <div className={"hidden md:block"}>
                                     Home
                                 </div>
@@ -35,8 +35,8 @@ export default function Dock() {
                             inactive={router.asPath != "/projects"}
                             dontOpenNewTab
                         >
-                            <div className={"flex gap-3 text-2xl"}>
-                                <CollectionIcon className={"w-7"}/>
+                            <div className={"grid grid-flow-col gap-3 items-center text-2xl"}>
+                                <CollectionIcon className={"w-6"}/>
                                 <div className={"hidden md:block"}>
                                     Projects
                                 </div>
@@ -44,13 +44,20 @@ export default function Dock() {
                         </LinkButton>
                     </div>
 
-                    <ClickableButton
-                        onClick={() => {
-                            setShowingSettings(true)
-                        }}
-                    >
-                        <CogIcon className={"w-7"}/>
-                    </ClickableButton>
+                    <div className={"place-self-end"}>
+                        <ClickableButton
+                            onClick={() => {
+                                setShowingSettings(true)
+                            }}
+                        >
+                            <div className={"grid grid-flow-col gap-3 items-center text-2xl"}>
+                                <CogIcon className={"w-6 text-2xl"}/>
+                                <div className={"hidden md:block"}>
+                                    Settings
+                                </div>
+                            </div>
+                        </ClickableButton>
+                    </div>
                 </div>
             </Window>
         </div>

@@ -8,5 +8,5 @@ interface BodyProps {
 }
 
 export default function Body({bold = false, bottomPadding = false, children}: BodyProps) {
-    return <p className={`text-xl md:text-2xl text-black/75 dark:text-white/75 ${bold ? "font-bold" : "font-medium"} ${bottomPadding && "mb-4"}`}>{children}</p>
+    return <p className={`text-xl md:text-2xl text-black/75 ${bold ? "font-bold dark:text-white" : "font-medium dark:text-white/80"} ${bottomPadding && "mb-4"}`}>{children}</p>
 }

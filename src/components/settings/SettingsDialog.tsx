@@ -3,7 +3,7 @@ import {Dialog, Switch, Transition} from '@headlessui/react'
 import Window from "../window/Window";
 import Title from "../typography/Title";
 import Body from '../typography/Body';
-import useDarkMode from "../../lib/hooks/useDarkMode";
+import {useDarkModeOverride} from "../../lib/hooks/useDarkMode";
 
 interface SettingsDialogProps {
     isOpen: boolean;
@@ -11,7 +11,7 @@ interface SettingsDialogProps {
 }
 
 export default function SettingsDialog({isOpen, setOpen}: SettingsDialogProps) {
-    const [_, override, setOverride] = useDarkMode()
+    const [override, setOverride] = useDarkModeOverride()
 
     function close() {
         setOpen(false);

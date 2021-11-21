@@ -1,11 +1,13 @@
 import {useEffect, useState} from "react";
 import useMediaQuery from "./useMediaQuery";
-import useLocalStorage from "use-local-storage";
+import {createLocalStorageStateHook} from "use-local-storage-state";
 
-export default function useDarkMode(): [boolean, boolean, (override: boolean) => void] {
+export const useDarkModeOverride = createLocalStorageStateHook<boolean>("should-force-dark", false)
+
+export function useDarkMode(): boolean {
     const prefersDark = useMediaQuery("(prefers-color-scheme: dark)")
     const [enabled, setEnabled] = useState(prefersDark)
-    const [override, setOverride] = useLocalStorage<boolean>("should-force-dark", false)
+    const [override] = useDarkModeOverride()
 
     useEffect(() => {
         if (override) {
@@ -18,7 +20,5 @@ export default function useDarkMode(): [boolean, boolean, (override: boolean) =>
         if (html) html.classList.toggle("dark", enabled)
     }, [enabled, setEnabled, prefersDark, override])
 
-    return [enabled, override, (override) => {
-        setOverride(override)
-    }]
+    return enabled
 }

@@ -9,7 +9,3 @@ body {
 
     @apply bg-background;
 }
-
-* {
-    @apply transition-all;
-}

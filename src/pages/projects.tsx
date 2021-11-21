@@ -6,11 +6,8 @@ import Head from "next/head";
 import Dock from "../components/dock/Dock";
 import WindowGroup from "../components/window/WindowGroup";
 import ProjectWindow from "../components/window/impl/projects/ProjectWindow";
-import useDarkMode from "../lib/hooks/useDarkMode";
 
 const Projects: NextPage = () => {
-    const [] = useDarkMode();
-
     return <>
         <Head>
             <title>Conor Byrne - Projects</title>

@@ -8,7 +8,7 @@ function AboutMeWindow() {
         <Window>
             <Title>Hey, I{"'"}m</Title>
             <Title muted={false}>Conor Byrne</Title>
-            <Body>I am a developer based in Ireland with experience in Kotlin, Java and Typescript.</Body>
+            <Body>I am a developer based in Ireland with experience in Kotlin, Java and TypeScript.</Body>
         </Window>
     );
 }
