@@ -1,7 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
 import type {GetStaticProps, NextPage} from 'next'
-import WindowRow from "../components/window/WindowRow";
 import NowPlayingWindow from "../components/window/impl/home/NowPlayingWindow";
 import AboutMeWindow from "../components/window/impl/home/AboutMeWindow";
 import WindowGroup from "../components/window/WindowGroup";
@@ -27,13 +26,10 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                 className={"flex flex-col items-center content-center justify-between h-full md:h-screen bg-background"}
             >
                 <WindowGroup>
-                    <WindowRow>
-                        <AboutMeWindow/>
-                        <NowPlayingWindow cache={nowPlayingCache}/>
-
-                        <LinksWindow/>
-                        <ExperienceWindow/>
-                    </WindowRow>
+                    <AboutMeWindow/>
+                    <LinksWindow/>
+                    <NowPlayingWindow cache={nowPlayingCache}/>
+                    <ExperienceWindow/>
                 </WindowGroup>
 
                 <Dock/>
