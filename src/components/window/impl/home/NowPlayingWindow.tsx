@@ -21,7 +21,7 @@ function NowPlayingWindow(props: NowPlayingWindowProps) {
             data && <Window>
                 <h5 className={"text-3xl font-bold text-black/50"}>Now Playing</h5>
                 <div className={"flex flex-row items-center content-center mt-4 gap-3 md:gap-4"}>
-                    <div className={"w-1/4 sm:w-1/6 md:w-1/3 lg:w-1/4 xl:w-1/6"}>
+                    <div className={"w-1/4 sm:w-1/6 md:w-1/3 lg:w-1/4 xl:w-24"}>
                         <Image
                             className={"rounded-lg sm:rounded-lg md:rounded-md lg:rounded-xl"}
                             src={data.image}

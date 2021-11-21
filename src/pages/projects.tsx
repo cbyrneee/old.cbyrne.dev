@@ -17,39 +17,37 @@ const Projects: NextPage = () => {
         <div
             className={"flex flex-col items-center content-center justify-between h-full md:h-screen bg-background"}
         >
-            <div className={"container p-4 md:p-0 md:m-auto"}>
-                <WindowGroup>
-                    <WindowRow>
-                        <ProjectWindow
-                            title={"OPLegends"}
-                            description={"I am working with OPLegends to help build new and exciting games on their network"}
-                            href={"https://oplegends.com"}
-                            buttonText={"Website"}
-                        />
+            <WindowGroup>
+                <WindowRow>
+                    <ProjectWindow
+                        title={"OPLegends"}
+                        description={"I am working with OPLegends to help build new and exciting games on their network"}
+                        href={"https://oplegends.com"}
+                        buttonText={"Website"}
+                    />
 
-                        <ProjectWindow
-                            title={"Kotlin Project Manager"}
-                            description={"kpm (Kotlin Project Manager) is a lightweight tool for managing and building Kotlin projects."}
-                            href={"https://github.com/cbyrneee/kpm"}
-                            buttonText={"GitHub"}
-                        />
+                    <ProjectWindow
+                        title={"Kotlin Project Manager"}
+                        description={"kpm (Kotlin Project Manager) is a lightweight tool for managing and building Kotlin projects."}
+                        href={"https://github.com/cbyrneee/kpm"}
+                        buttonText={"GitHub"}
+                    />
 
-                        <ProjectWindow
-                            title={"KDiscordIPC"}
-                            description={"A lightweight and easy to use Kotlin library for interacting with Discord via IPC."}
-                            href={"https://github.com/cbyrneee/KDiscordIPC"}
-                            buttonText={"GitHub"}
-                        />
+                    <ProjectWindow
+                        title={"KDiscordIPC"}
+                        description={"A lightweight and easy to use Kotlin library for interacting with Discord via IPC."}
+                        href={"https://github.com/cbyrneee/KDiscordIPC"}
+                        buttonText={"GitHub"}
+                    />
 
-                        <ProjectWindow
-                            title={"CompactChat"}
-                            description={"A mod for Fabric 1.17 which removes duplicate messages from your chat."}
-                            href={"https://github.com/cbyrneee/CompactChat"}
-                            buttonText={"GitHub"}
-                        />
-                    </WindowRow>
-                </WindowGroup>
-            </div>
+                    <ProjectWindow
+                        title={"CompactChat"}
+                        description={"A mod for Fabric 1.17 which removes duplicate messages from your chat."}
+                        href={"https://github.com/cbyrneee/CompactChat"}
+                        buttonText={"GitHub"}
+                    />
+                </WindowRow>
+            </WindowGroup>
 
             <Dock/>
         </div>

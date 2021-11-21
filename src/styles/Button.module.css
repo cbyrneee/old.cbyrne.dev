@@ -1,6 +1,11 @@
 .button {
-    @apply bg-background px-4 py-2 rounded-md text-accent uppercase font-bold text-lg transition-colors hover:bg-background/80;
+    @apply bg-background px-4 py-2 rounded-md text-accent uppercase font-bold text-lg transition-colors hover:bg-background/50;
 }
+
+.tooltip {
+    @apply bg-accent px-4 py-2 rounded-lg text-background uppercase font-bold text-lg transition-opacity opacity-0 absolute z-10 -my-14;
+}
+
 .inactive {
     @apply bg-background/50 text-accent/50 hover:bg-background/100 hover:text-accent/100;
 }

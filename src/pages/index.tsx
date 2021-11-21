@@ -26,17 +26,15 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
             <div
                 className={"flex flex-col items-center content-center justify-between h-full md:h-screen bg-background"}
             >
-                <div className={"container p-4 md:p-0 md:m-auto"}>
-                    <WindowGroup>
-                        <WindowRow>
-                            <AboutMeWindow/>
-                            <NowPlayingWindow cache={nowPlayingCache}/>
+                <WindowGroup>
+                    <WindowRow>
+                        <AboutMeWindow/>
+                        <NowPlayingWindow cache={nowPlayingCache}/>
 
-                            <LinksWindow/>
-                            <ExperienceWindow/>
-                        </WindowRow>
-                    </WindowGroup>
-                </div>
+                        <LinksWindow/>
+                        <ExperienceWindow/>
+                    </WindowRow>
+                </WindowGroup>
 
                 <Dock/>
             </div>

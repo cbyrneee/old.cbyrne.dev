@@ -6,8 +6,10 @@ interface WindowGroupProps {
 
 function WindowGroup(props: WindowGroupProps) {
     return <>
-        <div className={"flex flex-col gap-4"}>
-            {props.children}
+        <div className={"container p-4 md:p-0 md:m-auto"}>
+            <div className={"grid grid-flow-row auto-rows-max gap-4"}>
+                {props.children}
+            </div>
         </div>
     </>
 }
