@@ -25,9 +25,10 @@ function NowPlayingWindow(props: NowPlayingWindowProps) {
                         <Image
                             className={"rounded-md md:rounded-xl"}
                             src={data.image}
-                            alt={"album art"}
+                            alt={""}
                             width="300"
                             height="300"
+                            priority={true}
                         />
                     </div>
 

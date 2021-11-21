@@ -23,9 +23,7 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                     <WindowRow>
                         <AboutMeWindow/>
                         <NowPlayingWindow cache={nowPlayingCache}/>
-                    </WindowRow>
 
-                    <WindowRow>
                         <LinksWindow/>
                         <ExperienceWindow/>
                     </WindowRow>
