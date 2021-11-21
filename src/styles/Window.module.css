@@ -1,7 +1,7 @@
 .titlebar {
-    @apply flex gap-4 mb-10;
+    @apply flex gap-4 mb-6 md:mb-10;
 }
 
 .window {
-    @apply bg-window py-10 px-10 rounded-xl;
+    @apply bg-window p-7 md:p-10 rounded-xl;
 }

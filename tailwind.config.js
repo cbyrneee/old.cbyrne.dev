@@ -1,7 +1,7 @@
 module.exports = {
     mode: "jit",
     purge: {
-        content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+        content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
         safelist: [
             "bg-red-500",
             "bg-yellow-500",
@@ -11,7 +11,7 @@ module.exports = {
             "hover:bg-green-500/50"
         ]
     },
-    darkMode: false, // or 'media' or 'class'
+    darkMode: false, // or "media" or "class"
     theme: {
         extend: {
             colors: {
@@ -23,5 +23,7 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require("@tailwindcss/line-clamp")
+    ],
 }

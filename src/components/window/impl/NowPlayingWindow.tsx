@@ -1,27 +1,37 @@
-import React from 'react';
+import React from "react";
 import Window from "../Window";
+import useSWR from "swr";
+import fetcher from "../../../lib/fetcher";
+import TrackData from "../../../lib/TrackData.interface";
+import Image from "next/image";
 
-interface NowPlayingWindowProps {
+function NowPlayingWindow() {
+    const {data, error} = useSWR<TrackData>("/api/track", fetcher, {
+        refreshInterval: 5000
+    });
 
-}
-
-function NowPlayingWindow(props: NowPlayingWindowProps) {
     return <>
         <Window>
             <h5 className={"text-3xl font-bold text-black/50"}>Now Playing</h5>
+            {
+                error && <h2 className={"text-2xl font-medium text-black/75"}>Error fetching track</h2> ||
+                data && <div className={"flex mt-4 gap-3 md:gap-4"}>
+                    <div className={"w-1/4 md:w-1/6"}>
+                        <Image
+                            className={"rounded-md md:rounded-xl"}
+                            src={data.image}
+                            alt={"album art"}
+                            width="300"
+                            height="300"
+                        />
+                    </div>
 
-            <div className={"flex mt-4 gap-3"}>
-                <img
-                    className={"w-20 h-20 md:w-24 md:h-24 rounded-md md:rounded-lg"}
-                    src={"https://i.scdn.co/image/ab67616d0000b273fdd84651effb8ffe71b098e9"}
-                    alt={"album art"}
-                />
-
-                <div>
-                    <h1 className={"text-2xl font-bold text-black mt-2 md:mt-4"}>Void</h1>
-                    <h2 className={"text-2xl font-medium text-black/75"}>Volumes</h2>
+                    <div className={"w-3/4 md:w-5/6"}>
+                        <h1 className={"text-2xl font-bold text-black mt-2 md:mt-6 line-clamp-1"}>{data.name}</h1>
+                        <h2 className={"text-2xl font-medium text-black/75 line-clamp-1"}>{data.artist}</h2>
+                    </div>
                 </div>
-            </div>
+            }
         </Window>
     </>;
 }
