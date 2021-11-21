@@ -1,11 +1,14 @@
 // noinspection JSUnusedGlobalSymbols
 
-import type {GetStaticProps, GetStaticPropsContext, NextPage} from 'next'
+import type {GetStaticProps, NextPage} from 'next'
 import WindowRow from "../components/window/WindowRow";
 import NowPlayingWindow from "../components/window/impl/NowPlayingWindow";
 import AboutMeWindow from "../components/window/impl/AboutMeWindow";
 import WindowGroup from "../components/window/WindowGroup";
 import TrackData from "../lib/TrackData.interface";
+import getTrack from "../lib/getTrack";
+import React from "react";
+import LinksWindow from "../components/window/impl/LinksWindow";
 
 interface HomeProps {
     nowPlayingCache: TrackData | undefined
@@ -20,15 +23,16 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                         <AboutMeWindow/>
                         <NowPlayingWindow cache={nowPlayingCache}/>
                     </WindowRow>
+
+                    <LinksWindow/>
                 </WindowGroup>
             </div>
         </div>
     )
 }
 
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-    const request = await fetch("http://localhost:3000/api/track")
-    const nowPlayingCache = await request.json()
+export const getStaticProps: GetStaticProps = async () => {
+    const nowPlayingCache = await getTrack()
 
     return {
         props: {

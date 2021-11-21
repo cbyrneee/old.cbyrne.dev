@@ -1,0 +1,3 @@
+.button {
+    @apply bg-background px-4 py-2 rounded-md text-accent uppercase font-bold text-lg transition-colors hover:bg-background/80;
+}
