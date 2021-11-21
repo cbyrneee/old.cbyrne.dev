@@ -18,7 +18,7 @@ module.exports = {
                 "window": "#FEF6F5",
                 "background": "#F8D0CD",
                 "accent": "#E76054"
-            }
+            },
         },
     },
     variants: {

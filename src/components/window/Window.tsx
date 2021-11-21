@@ -5,15 +5,21 @@ import WindowButton from "./WindowButton";
 interface WindowProps {
     children: React.ReactNode,
     removeDecoration?: boolean
+
+    onlyClose?: boolean
+    onClose?: () => void
 }
 
-function Window({children, removeDecoration = false}: WindowProps) {
+function Window({children, onClose, removeDecoration = false, onlyClose = false}: WindowProps) {
     return <>
-        <div className={`${styles.window} ${!removeDecoration && styles.standardWindow}`}>
+        <div className={styles.window}>
             {!removeDecoration && <div className={styles.titlebar}>
-                <WindowButton color={"red"}/>
-                <WindowButton color={"yellow"}/>
-                <WindowButton color={"green"}/>
+                <WindowButton color={"red"} onClick={onClose}/>
+                {!onlyClose && (<>
+                    <WindowButton color={"yellow"}/>
+                    <WindowButton color={"green"}/>
+                </>)
+                }
             </div>}
 
             {children}
