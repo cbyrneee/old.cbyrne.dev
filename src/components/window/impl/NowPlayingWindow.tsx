@@ -5,9 +5,14 @@ import fetcher from "../../../lib/fetcher";
 import TrackData from "../../../lib/TrackData.interface";
 import Image from "next/image";
 
-function NowPlayingWindow() {
+interface NowPlayingWindowProps {
+    cache: TrackData | undefined;
+}
+
+function NowPlayingWindow(props: NowPlayingWindowProps) {
     const {data, error} = useSWR<TrackData>("/api/track", fetcher, {
-        refreshInterval: 5000
+        refreshInterval: 5000,
+        fallbackData: props.cache,
     });
 
     return <>
@@ -26,8 +31,8 @@ function NowPlayingWindow() {
                         />
                     </div>
 
-                    <div className={"w-3/4 md:w-5/6"}>
-                        <h1 className={"text-2xl font-bold text-black mt-2 md:mt-6 line-clamp-1"}>{data.name}</h1>
+                    <div className={"w-3/4 md:w-5/6 mr-5"}>
+                        <h1 className={"text-2xl font-bold text-black mt-2 md:mt-3 line-clamp-1"}>{data.name}</h1>
                         <h2 className={"text-2xl font-medium text-black/75 line-clamp-1"}>{data.artist}</h2>
                     </div>
                 </div>
