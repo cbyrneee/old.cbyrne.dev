@@ -1,7 +1,7 @@
 import React from 'react';
 import Window from "../../Window";
 import ButtonGroup from "../../../control/ButtonGroup";
-import Button from "../../../control/Button";
+import LinkButton from "../../../control/LinkButton";
 
 export default function ExperienceWindow() {
     return <Window>
@@ -10,11 +10,9 @@ export default function ExperienceWindow() {
             We are building innovative gameplay experiences.</h2>
 
         <ButtonGroup>
-            <a href={"https://oplegends.com/"} target="_blank" rel="noreferrer">
-                <Button>
-                    OPLegends Website
-                </Button>
-            </a>
+            <LinkButton href={"https://oplegends.com/"}>
+                OPLegends Website
+            </LinkButton>
         </ButtonGroup>
     </Window>
 }

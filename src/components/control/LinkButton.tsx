@@ -6,13 +6,14 @@ interface LinkButtonProps {
     children: React.ReactNode;
     inactive?: boolean;
     href: string;
+    dontOpenNewTab?: boolean
 }
 
-export default function LinkButton(props: LinkButtonProps) {
-    return <Link href={props.href} passHref={true}>
-        <a>
-            <Button inactive={props.inactive}>
-                {props.children}
+export default function LinkButton({children, inactive, href, dontOpenNewTab = false}: LinkButtonProps) {
+    return <Link href={href} passHref={true}>
+        <a target={dontOpenNewTab ? "_self" : "_blank"} referrerPolicy={"no-referrer"}>
+            <Button inactive={inactive}>
+                {children}
             </Button>
         </a>
     </Link>

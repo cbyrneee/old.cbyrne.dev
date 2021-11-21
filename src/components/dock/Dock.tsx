@@ -12,11 +12,11 @@ export default function Dock() {
         <div className={"flex p-4 md:p-0 md:m-auto"}>
             <Window noButtons>
                 <ButtonGroup>
-                    <LinkButton href={"/"} inactive={router.asPath != "/"}>
+                    <LinkButton href={"/"} inactive={router.asPath != "/"} dontOpenNewTab>
                         <HomeIcon className={"w-10"}/>
                     </LinkButton>
 
-                    <LinkButton href={"/projects"} inactive={router.asPath != "/projects"}>
+                    <LinkButton href={"/projects"} inactive={router.asPath != "/projects"} dontOpenNewTab>
                         <CollectionIcon className={"w-10"}/>
                     </LinkButton>
                 </ButtonGroup>

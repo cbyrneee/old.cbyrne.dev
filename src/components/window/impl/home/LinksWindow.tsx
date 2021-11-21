@@ -1,7 +1,7 @@
 import React from 'react';
 import Window from "../../Window";
 import ButtonGroup from "../../../control/ButtonGroup";
-import Button from "../../../control/Button";
+import LinkButton from "../../../control/LinkButton";
 
 export default function LinksWindow() {
     return <Window>
@@ -10,17 +10,13 @@ export default function LinksWindow() {
             touch and build some great software together.</h2>
 
         <ButtonGroup>
-            <a href={"https://github.com/cbyrneee"} target="_blank" rel="noreferrer">
-                <Button>
-                    GitHub
-                </Button>
-            </a>
+            <LinkButton href={"https://github.com/cbyrneee"}>
+                GitHub
+            </LinkButton>
 
-            <a href={"mailto:hello@cbyrne.dev"} target="_blank" rel="noreferrer">
-                <Button>
-                    Email Me
-                </Button>
-            </a>
+            <LinkButton href={"mailto:hello@cbyrne.dev"}>
+                Email Me
+            </LinkButton>
         </ButtonGroup>
     </Window>
 }
