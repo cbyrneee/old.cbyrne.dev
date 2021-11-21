@@ -9,6 +9,7 @@ import TrackData from "../lib/TrackData.interface";
 import getTrack from "../lib/getTrack";
 import React from "react";
 import LinksWindow from "../components/window/impl/LinksWindow";
+import ExperienceWindow from "../components/window/impl/ExperienceWindow";
 
 interface HomeProps {
     nowPlayingCache: TrackData | undefined
@@ -24,7 +25,10 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                         <NowPlayingWindow cache={nowPlayingCache}/>
                     </WindowRow>
 
-                    <LinksWindow/>
+                    <WindowRow>
+                        <LinksWindow/>
+                        <ExperienceWindow/>
+                    </WindowRow>
                 </WindowGroup>
             </div>
         </div>
