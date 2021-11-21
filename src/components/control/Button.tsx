@@ -8,7 +8,7 @@ interface ButtonProps {
 
 export default function Button(props: ButtonProps) {
     return (
-        <div className={`${styles.button} ${props.inactive ? styles.inactive : ""}`}>
+        <div className={`${styles.button} ${props.inactive ? styles.inactiveButton : ""}`}>
             {props.children}
         </div>
     )
