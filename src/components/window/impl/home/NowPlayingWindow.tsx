@@ -1,12 +1,12 @@
 import React from "react";
-import Window from "../Window";
 import useSWR from "swr";
-import fetcher from "../../../lib/fetcher";
-import TrackData from "../../../lib/TrackData.interface";
+import fetcher from "../../../../lib/fetcher";
+import TrackData from "../../../../lib/TrackData.interface";
 import Image from "next/image";
+import Window from "../../Window";
 
 interface NowPlayingWindowProps {
-    cache: TrackData | undefined;
+    cache?: TrackData;
 }
 
 function NowPlayingWindow(props: NowPlayingWindowProps) {

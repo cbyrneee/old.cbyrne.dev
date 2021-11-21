@@ -1,7 +1,7 @@
 import React from 'react';
-import Window from "../Window";
-import ButtonGroup from "../../control/ButtonGroup";
-import Button from "../../control/Button";
+import Window from "../../Window";
+import ButtonGroup from "../../../control/ButtonGroup";
+import Button from "../../../control/Button";
 
 export default function LinksWindow() {
     return <Window>

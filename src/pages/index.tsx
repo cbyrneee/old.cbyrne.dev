@@ -2,14 +2,14 @@
 
 import type {GetStaticProps, NextPage} from 'next'
 import WindowRow from "../components/window/WindowRow";
-import NowPlayingWindow from "../components/window/impl/NowPlayingWindow";
-import AboutMeWindow from "../components/window/impl/AboutMeWindow";
+import NowPlayingWindow from "../components/window/impl/home/NowPlayingWindow";
+import AboutMeWindow from "../components/window/impl/home/AboutMeWindow";
 import WindowGroup from "../components/window/WindowGroup";
 import TrackData from "../lib/TrackData.interface";
 import getTrack from "../lib/getTrack";
 import React from "react";
-import LinksWindow from "../components/window/impl/LinksWindow";
-import ExperienceWindow from "../components/window/impl/ExperienceWindow";
+import LinksWindow from "../components/window/impl/home/LinksWindow";
+import ExperienceWindow from "../components/window/impl/home/ExperienceWindow";
 import Head from "next/head";
 import Dock from "../components/dock/Dock";
 
@@ -24,7 +24,8 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                 <title>Conor Byrne</title>
             </Head>
             <div
-                className={"flex flex-col items-center content-center justify-between h-full md:h-screen bg-background"}>
+                className={"flex flex-col items-center content-center justify-between h-full md:h-screen bg-background"}
+            >
                 <div className={"container p-4 md:p-0 md:m-auto"}>
                     <WindowGroup>
                         <WindowRow>

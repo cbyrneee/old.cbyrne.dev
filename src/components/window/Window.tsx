@@ -4,7 +4,7 @@ import WindowButton from "./WindowButton";
 
 interface WindowProps {
     children: React.ReactNode,
-    noButtons: boolean
+    noButtons?: boolean
 }
 
 function Window({children, noButtons = false}: WindowProps) {
