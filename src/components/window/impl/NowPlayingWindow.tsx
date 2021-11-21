@@ -23,7 +23,7 @@ function NowPlayingWindow(props: NowPlayingWindowProps) {
                 <div className={"flex flex-row items-center content-center mt-4 gap-3 md:gap-4"}>
                     <div className={"w-1/4 sm:w-1/6 md:w-1/3 lg:w-1/4 xl:w-1/6"}>
                         <Image
-                            className={"rounded-lg sm:rounded-sm md:rounded-md lg:rounded-xl"}
+                            className={"rounded-lg sm:rounded-lg md:rounded-md lg:rounded-xl"}
                             src={data.image}
                             alt={""}
                             width="300"
