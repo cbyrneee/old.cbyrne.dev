@@ -12,7 +12,7 @@ interface WindowProps {
 
 function Window({children, onClose, removeDecoration = false, onlyClose = false}: WindowProps) {
     return <>
-        <div className={styles.window}>
+        <div className="bg-window dark:bg-window-dark p-7 md:p-10 rounded-xl">
             {!removeDecoration && <div className={styles.titlebar}>
                 <WindowButton color={"red"} onClick={onClose}/>
                 {!onlyClose && (<>

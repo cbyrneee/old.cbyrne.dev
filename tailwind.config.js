@@ -11,12 +11,14 @@ module.exports = {
             "hover:bg-green-500/50"
         ]
     },
-    darkMode: false, // or "media" or "class"
+    darkMode: "class", // or "media" or "class"
     theme: {
         extend: {
             colors: {
                 "window": "#FEF6F5",
+                "window-dark": "#1a1919",
                 "background": "#F8D0CD",
+                "background-dark": "rgb(11, 2, 2)",
                 "accent": "#E76054"
             },
         },

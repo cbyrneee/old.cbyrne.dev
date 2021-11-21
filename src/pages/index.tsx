@@ -23,7 +23,7 @@ const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
                 <title>Conor Byrne</title>
             </Head>
             <div
-                className={"flex items-center content-center justify-between min-h-screen bg-background flex-col-reverse xl:flex-col"}
+                className={"flex items-center content-center justify-between min-h-screen bg-background dark:bg-background-dark flex-col-reverse xl:flex-col"}
             >
                 <WindowGroup>
                     <AboutMeWindow/>
