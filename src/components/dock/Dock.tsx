@@ -15,8 +15,8 @@ export default function Dock() {
             <SettingsDialog isOpen={isShowingSettings} setOpen={setShowingSettings}/>
 
             <Window removeDecoration>
-                <div className={"flex gap-4 flex-col md:flex-row md:justify-between"}>
-                    <div className={"flex gap-4 flex-col md:flex-row"}>
+                <div className={"flex gap-4 flex-row justify-between"}>
+                    <div className={"flex gap-4 flex-row justify-between"}>
                         <LinkButton
                             href={"/"}
                             inactive={router.asPath != "/"}
@@ -24,7 +24,9 @@ export default function Dock() {
                         >
                             <div className={"flex gap-3 text-2xl"}>
                                 <HomeIcon className={"w-7"}/>
-                                Home
+                                <div className={"hidden md:block"}>
+                                    Home
+                                </div>
                             </div>
                         </LinkButton>
 
@@ -35,7 +37,9 @@ export default function Dock() {
                         >
                             <div className={"flex gap-3 text-2xl"}>
                                 <CollectionIcon className={"w-7"}/>
-                                Projects
+                                <div className={"hidden md:block"}>
+                                    Projects
+                                </div>
                             </div>
                         </LinkButton>
                     </div>
