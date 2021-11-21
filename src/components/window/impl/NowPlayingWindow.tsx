@@ -11,11 +11,11 @@ function NowPlayingWindow() {
     });
 
     return <>
-        <Window>
-            <h5 className={"text-3xl font-bold text-black/50"}>Now Playing</h5>
-            {
-                error && <h2 className={"text-2xl font-medium text-black/75"}>Error fetching track</h2> ||
-                data && <div className={"flex mt-4 gap-3 md:gap-4"}>
+        {
+            error && <></> ||
+            data && <Window>
+                <h5 className={"text-3xl font-bold text-black/50"}>Now Playing</h5>
+                <div className={"flex mt-4 gap-3 md:gap-4"}>
                     <div className={"w-1/4 md:w-1/6"}>
                         <Image
                             className={"rounded-md md:rounded-xl"}
@@ -31,8 +31,9 @@ function NowPlayingWindow() {
                         <h2 className={"text-2xl font-medium text-black/75 line-clamp-1"}>{data.artist}</h2>
                     </div>
                 </div>
-            }
-        </Window>
+            </Window>
+        }
+
     </>;
 }
 

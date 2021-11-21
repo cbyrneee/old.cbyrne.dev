@@ -6,7 +6,7 @@ interface WindowRowProps {
 
 function WindowRow(props: WindowRowProps) {
     return <>
-        <div className={"grid gap-4 md:grid-cols-2"}>
+        <div className={"grid grid-flow-row gap-4 md:grid-flow-col"}>
             {props.children}
         </div>
     </>

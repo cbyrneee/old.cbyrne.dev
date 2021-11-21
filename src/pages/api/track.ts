@@ -4,7 +4,6 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    // Fetch the latest track for a user on Last.FM
     const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${process.env.LAST_FM_USER}&api_key=${process.env.LAST_FM_KEY}&format=json`)
     if (!response.ok)
         return res.status(response.status).json({message: "Error: Received non OK code from Last.FM!"})
