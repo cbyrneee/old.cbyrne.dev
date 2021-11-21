@@ -1,5 +1,5 @@
 .titlebar {
-    @apply flex gap-4 mb-6 md:mb-10;
+    @apply flex gap-4 mb-6;
 }
 
 .window {
