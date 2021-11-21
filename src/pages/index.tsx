@@ -10,6 +10,7 @@ import getTrack from "../lib/getTrack";
 import React from "react";
 import LinksWindow from "../components/window/impl/LinksWindow";
 import ExperienceWindow from "../components/window/impl/ExperienceWindow";
+import Head from "next/head";
 
 interface HomeProps {
     nowPlayingCache: TrackData | undefined
@@ -17,17 +18,22 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({nowPlayingCache}) => {
     return (
-        <div className={"md:h-screen h-full bg-background"}>
-            <div className={"container p-4 md:pt-20 md:p-0 md:mx-auto"}>
-                <WindowGroup>
-                    <WindowRow>
-                        <AboutMeWindow/>
-                        <NowPlayingWindow cache={nowPlayingCache}/>
+        <div>
+            <Head>
+                <title>Conor Byrne</title>
+            </Head>
+            <div className={"md:h-screen h-full bg-background"}>
+                <div className={"container p-4 md:pt-20 md:p-0 md:mx-auto"}>
+                    <WindowGroup>
+                        <WindowRow>
+                            <AboutMeWindow/>
+                            <NowPlayingWindow cache={nowPlayingCache}/>
 
-                        <LinksWindow/>
-                        <ExperienceWindow/>
-                    </WindowRow>
-                </WindowGroup>
+                            <LinksWindow/>
+                            <ExperienceWindow/>
+                        </WindowRow>
+                    </WindowGroup>
+                </div>
             </div>
         </div>
     )
